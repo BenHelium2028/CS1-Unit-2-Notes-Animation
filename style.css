@@ -1,1 +1,17 @@
+.box {
+    background-color: fuchsia;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
 
+/*  transform is a property that takes the functinal vlaue like f(x) to change an element*/
+
+#rotate {
+    transform: rotate(67deg);
+}
+
+#scale {
+    transform: scale(0.7);
+}
