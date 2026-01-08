@@ -15,3 +15,21 @@
 #scale {
     transform: scale(0.7);
 }
+
+#skew {
+    transform: skew(40deg, 4deg);
+}
+
+
+/*
+translate (x) moves element horizontaly
+translats (x, y) moves diagninally
+*/
+
+#translate {
+    transform: translate(50px, 40px);
+}
+
+#chain {
+    transform: scale(1.4) skew(-30deg, 10deg) translate(50px, 40px);
+}
