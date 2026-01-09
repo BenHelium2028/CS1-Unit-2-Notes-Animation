@@ -1,3 +1,38 @@
+/* configuration to be an element
+*/
+#animatedShape{
+    background-color: salmon;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    /*sub properties for the animation*/
+    animation-name: colorChangeBoxAlt;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/*define the animation sequence*/
+@keyframes colorChangeBox{
+    from {background-color: salmon;}
+    to {background-color:chartreuse;}
+}
+
+@keyframes colorChangeBoxAlt{
+    0% {background-color: black; transform: rotate(200deg) skew(8000deg);}
+    25%{background-color:salmon;}
+    75% {background-color:chartreuse; }
+    100% {background-color: black;}
+}
+
+#animatedEmoji{
+    font-size: 1in;
+    /*background-color: salmon;*/
+    transform: skew(15deg);
+}
+
+
+
 .box {
     background-color: fuchsia;
     margin: 20px;
