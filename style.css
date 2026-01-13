@@ -3,11 +3,11 @@
 #animatedShape{
     background-color: salmon;
     margin: 20px;
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
     /*sub properties for the animation*/
     animation-name: colorChangeBoxAlt;
-    animation-duration: 1.5s;
+    animation-duration: 50ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -19,19 +19,40 @@
 }
 
 @keyframes colorChangeBoxAlt{
-    0% {background-color: black; transform: rotate(200deg) skew(8000deg);}
+    0% {background-color: black; transform: rotate(0deg) skew(100deg);}
     25%{background-color:salmon;}
+    50% {transform: rotate(180deg) skew(56000deg);}
     75% {background-color:chartreuse; }
-    100% {background-color: black;}
+    100% {background-color: black; transform: rotate(360deg) skew(10deg);}
 }
+
+/*step 1:
+Config an alement to be animated property whitch sets name, duration, iteration, and timing function in one line
+*/
 
 #animatedEmoji{
     font-size: 1in;
     /*background-color: salmon;*/
     transform: skew(15deg);
+
+    animation: moveEmoji 5s infinite linear;
+    /*display: inline-block;*/
+    position: absolute;
+    top: 150px;
+    left: 220px;
 }
 
+/*step 2:
+Define an amimation using keyfraims
+*/
 
+@keyframes moveEmoji{
+    0% {opacity: 1;}
+    25% {transform: translate(-1000px, 0px); opacity: 1;}
+    50% {transform: translate(-1100px, 0px); opacity: 0;}
+    75% {transform: translate(1000px); opacity: 0;}
+    100% { opacity: 1;}
+}
 
 .box {
     background-color: fuchsia;
